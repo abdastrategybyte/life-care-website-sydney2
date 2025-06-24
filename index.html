@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Home & Community Care | NDIS Provider in Sydney</title>
+    <meta name="description" content="Registered NDIS provider offering Chiropractic and Occupational Therapy services with home modification assessments in Sydney.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a73e8',
+                        secondary: '#34a853',
+                        accent: '#fbbc05',
+                        dark: '#202124',
+                        light: '#f8f9fa'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #1a73e8;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion.active .accordion-content {
+            max-height: 500px;
+        }
+        
+        .testimonial-card {
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 60px;
+            color: rgba(26, 115, 232, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .floating-btn {
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 rounded absolute top-0 left-0 m-2 z-50">Skip to main content</a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl mr-3">LH</div>
+                <a href="index.html" class="text-2xl font-bold text-primary">Life Home Care</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium text-primary">Home</a>
+                <a href="#about" class="nav-link font-medium hover:text-primary">About</a>
+                <a href="#services" class="nav-link font-medium hover:text-primary">Services</a>
+                <a href="#ndis" class="nav-link font-medium hover:text-primary">NDIS</a>
+                <a href="#contact" class="nav-link font-medium hover:text-primary">Contact</a>
+                <a href="tel:0431253789" class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> Call Now
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg absolute w-full left-0">
+            <a href="#home" class="block py-2 text-primary font-medium">Home</a>
+            <a href="#about" class="block py-2 hover:text-primary">About</a>
+            <a href="#services" class="block py-2 hover:text-primary">Services</a>
+            <a href="#ndis" class="block py-2 hover:text-primary">NDIS</a>
+            <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+            <a href="tel:0431253789" class="block bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-center mt-2 transition duration-300">
+                <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="gradient-bg text-white hero-clip pb-32 pt-20 px-4">
+            <div class="container mx-auto flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <span class="inline-block bg-white text-primary px-4 py-1 rounded-full text-sm font-medium mb-4">NDIS Registered Provider</span>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Empowering Independence Through Quality Care</h1>
+                    <p class="text-xl mb-8 opacity-90">Specialized chiropractic and occupational therapy services with home modification assessments to support your independence and wellbeing in Sydney.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-6 rounded-lg text-center transition duration-300 shadow-md">Get Started</a>
+                        <a href="#services" class="border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center mt-10 md:mt-0">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Therapist assisting client" class="rounded-xl shadow-2xl w-full max-w-md border-8 border-white">
+                        <div class="absolute -bottom-6 -right-6 bg-white text-primary p-4 rounded-xl shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-primary text-white p-2 rounded-lg mr-3">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">Call us anytime</p>
+                                    <p class="font-bold text-lg">0431 253 789</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators -->
+        <section class="bg-white py-12 -mt-16">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-lg p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-primary bg-opacity-10 text-primary p-4 rounded-full mb-3">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold mb-1">NDIS Registered</h3>
+                        <p class="text-sm text-gray-600">Approved provider</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-secondary bg-opacity-10 text-secondary p-4 rounded-full mb-3">
+                            <i class="fas fa-user-md text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold mb-1">Qualified Team</h3>
+                        <p class="text-sm text-gray-600">Experienced professionals</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-accent bg-opacity-10 text-accent p-4 rounded-full mb-3">
+                            <i class="fas fa-home text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold mb-1">Mobile Services</h3>
+                        <p class="text-sm text-gray-600">Home visits available</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-primary bg-opacity-10 text-primary p-4 rounded-full mb-3">
+                            <i class="fas fa-star text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold mb-1">5-Star Rated</h3>
+                        <p class="text-sm text-gray-600">Client satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="text-primary font-medium">WHO WE ARE</span>
+                    <h2 class="text-3xl font-bold mt-2">Compassionate Care for Your Independence</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Our team" class="rounded-xl shadow-lg w-full">
+                            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg w-3/4">
+                                <h3 class="font-bold text-lg mb-2">Our Mission</h3>
+                                <p class="text-gray-600">To empower individuals with disabilities through personalized, high-quality care that promotes independence.</p>
+                                <div class="flex items-center mt-4">
+                                    <div class="flex -space-x-2">
+                                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team member">
+                                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team member">
+                                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team member">
+                                    </div>
+                                    <span class="ml-3 text-sm font-medium">Our Dedicated Team</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-4 text-primary">Why Choose Us</h3>
+                            <p class="text-gray-600 mb-6">At Life Home Care, we go beyond standard services to create meaningful change in our clients' lives. Our holistic approach addresses physical, emotional, and environmental factors to support independence at every life stage.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex">
+                                    <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-lg mr-4">
+                                        <i class="fas fa-heart text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Person-Centered Approach</h4>
+                                        <p class="text-gray-600">Every service is tailored to your unique needs, goals, and preferences.</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="bg-secondary bg-opacity-10 text-secondary p-2 rounded-lg mr-4">
+                                        <i class="fas fa-hand-holding-heart text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Compassionate Professionals</h4>
+                                        <p class="text-gray-600">Our team combines expertise with genuine care and understanding.</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="bg-accent bg-opacity-10 text-accent p-2 rounded-lg mr-4">
+                                        <i class="fas fa-home text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Convenient Service</h4>
+                                        <p class="text-gray-600">We come to you - at home, work, or in the community.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-primary text-white rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-3">Ready to Get Started?</h3>
+                            <p class="mb-4 opacity-90">Contact us today to discuss how we can support your independence and wellbeing.</p>
+                            <a href="#contact" class="inline-block bg-white text-primary font-bold py-2 px-6 rounded-lg transition duration-300 hover:bg-gray-100">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="text-primary font-medium">OUR SERVICES</span>
+                    <h2 class="text-3xl font-bold mt-2">Specialized Support for Your Needs</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-4">We offer comprehensive services designed to enhance your independence and quality of life.</p>
+                    <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-primary">
+                        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg inline-block mb-4">
+                            <i class="fas fa-bone text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Chiropractic Care</h3>
+                        <p class="text-gray-600 mb-4">Specialized care to improve mobility, reduce pain, and enhance physical function.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Pain management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Postural support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Mobility enhancement</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-medium inline-flex items-center mt-2">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-secondary">
+                        <div class="bg-secondary bg-opacity-10 text-secondary p-3 rounded-lg inline-block mb-4">
+                            <i class="fas fa-wheelchair text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Occupational Therapy</h3>
+                        <p class="text-gray-600 mb-4">Helping clients develop or regain skills needed for daily living.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Daily living skills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Sensory integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Equipment prescription</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-secondary font-medium inline-flex items-center mt-2">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-accent">
+                        <div class="bg-accent bg-opacity-10 text-accent p-3 rounded-lg inline-block mb-4">
+                            <i class="fas fa-home text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Home Modifications</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive assessments to make your home safer and accessible.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Accessibility assessments</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Bathroom modifications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                                <span>Ramps & railings</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-accent font-medium inline-flex items-center mt-2">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 4 -->
+                    <div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-primary">
+                        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg inline-block mb-4">
+                            <i class="fas fa-hands-helping text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Life Stage Support</h3>
+                        <p class="text-gray-600 mb-4">Specialized support for transitions between life stages.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>School transitions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Independent living</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Aged care preparation</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-primary font-medium inline-flex items-center mt-2">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="#contact" class="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-md">
+                        <i class="fas fa-calendar-alt mr-2"></i> Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NDIS Section -->
+        <section id="ndis" class="py-16 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <span class="text-primary font-medium">NDIS SUPPORT</span>
+                            <h2 class="text-3xl font-bold mt-2 mb-4">Navigating Your NDIS Journey</h2>
+                            <p class="text-gray-600 mb-6">As a registered NDIS provider, we help participants access and maximize their NDIS plans to achieve their goals for independence and quality of life.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="accordion bg-gray-50 rounded-lg p-4">
+                                    <button class="accordion-button w-full text-left flex justify-between items-center focus:outline-none">
+                                        <span class="font-semibold">How to access our services under NDIS</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="pt-4">
+                                            <ol class="list-decimal pl-5 space-y-2 text-gray-600">
+                                                <li>Ensure your NDIS plan includes funding for the relevant supports</li>
+                                                <li>Contact us to discuss your needs and service availability</li>
+                                                <li>We'll help complete required service agreements</li>
+                                                <li>Schedule your first appointment at our clinic or your home</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion bg-gray-50 rounded-lg p-4">
+                                    <button class="accordion-button w-full text-left flex justify-between items-center focus:outline-none">
+                                        <span class="font-semibold">Eligibility & Funding</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="pt-4 text-gray-600">
+                                            <p>Our services may be funded under these NDIS support categories:</p>
+                                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                                <li>Improved Daily Living (Therapy Supports)</li>
+                                                <li>Improved Health and Wellbeing</li>
+                                                <li>Home Modifications</li>
+                                                <li>Assistive Technology</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion bg-gray-50 rounded-lg p-4">
+                                    <button class="accordion-button w-full text-left flex justify-between items-center focus:outline-none">
+                                        <span class="font-semibold">Plan Management Options</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="pt-4 text-gray-600">
+                                            <p>We work with all plan management options:</p>
+                                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                                <li>NDIS-managed funding</li>
+                                                <li>Plan-managed funding</li>
+                                                <li>Self-managed funding</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-primary text-white rounded-xl p-8 shadow-lg">
+                            <h2 class="text-2xl font-bold mb-4">NDIS Frequently Asked Questions</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="accordion border-b border-blue-400 pb-4">
+                                    <button class="accordion-button w-full text-left flex justify-between items-center focus:outline-none">
+                                        <span class="font-medium">What home modifications are covered under NDIS?</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300 text-blue-200"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="pt-3 text-blue-100">
+                                            <p>The NDIS may fund home modifications that help you:</p>
+                                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                                <li>Access and move around your home safely</li>
+                                                <li>Use bathroom and kitchen independently</li>
+                                                <li>Enter and exit your home</li>
+                                                <li>Live more independently</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion border-b border-blue-400 pb-4">
+                                    <button class="accordion-button w-full text-left flex justify-between items-center focus:outline-none">
+                                        <span class="font-medium">Who can access OT or chiropractic services?</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300 text-blue-200"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="pt-3 text-blue-100">
+                                            <p>Our services are available to:</p>
+                                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                                <li>NDIS participants with funding</li>
+                                                <li>Private clients seeking our services</li>
+                                                <li>Individuals referred by health professionals</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion border-b border-blue-400 pb-4">
+                                    <button class="accordion-button w-full text-left flex justify-between items-center focus:outline-none">
+                                        <span class="font-medium">How do I get a referral for your services?</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300 text-blue-200"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="pt-3 text-blue-100">
+                                            <p>Referrals can come from:</p>
+                                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                                <li>Your NDIS planner or coordinator</li>
+                                                <li>General practitioners</li>
+                                                <li>Other therapists</li>
+                                                <li>Self-referral</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <a href="#contact" class="inline-block bg-white text-primary font-bold py-2 px-6 rounded-lg transition duration-300 hover:bg-gray-100">
+                                    Ask Us a Question
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="text-primary font-medium">CLIENT STORIES</span>
+                    <h2 class="text-3xl font-bold mt-2">What Our Clients Say</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">2/6/21</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"The occupational therapist from Life Home Care completely transformed my bathroom to make it accessible. Their attention to detail and understanding of my needs was exceptional."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James S." class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">James S.</h4>
+                                <p class="text-sm text-gray-500">NDIS Participant</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">15/5/21</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"The chiropractic care has significantly improved my mobility and reduced my pain. The therapist comes to my home which makes it so convenient with my disability."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria L." class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Maria L.</h4>
+                                <p class="text-sm text-gray-500">Client</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">30/4/21</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"As a support coordinator, I regularly refer clients to Life Home Care. Their professionalism and NDIS expertise make the process smooth for everyone involved."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Tanya C." class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold">Tanya C.</h4>
+                                <p class="text-sm text-gray-500">Support Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="#" class="inline-flex items-center text-primary font-medium">
+                        <i class="fas fa-comment-dots mr-2"></i> Read more testimonials
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="gradient-bg text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Take the Next Step?</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">Contact us today to discuss how we can support your independence and wellbeing through our specialized services.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg transition duration-300 shadow-md">
+                        Get in Touch
+                    </a>
+                    <a href="tel:0431253789" class="border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="text-primary font-medium">GET IN TOUCH</span>
+                    <h2 class="text-3xl font-bold mt-2">Contact Our Team</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-4">We're here to answer your questions and discuss how we can support you or your loved one.</p>
+                    <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="lg:w-1/2">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2 font-medium">Your Name*</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2 font-medium">Email Address*</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 mb-2 font-medium">Service Interested In</label>
+                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                    <option value="">Select a service</option>
+                                    <option value="chiropractic">Chiropractic Care</option>
+                                    <option value="occupational">Occupational Therapy</option>
+                                    <option value="home-mod">Home Modifications</option>
+                                    <option value="ndis">NDIS Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2 font-medium">Your Message*</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"></textarea>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" id="consent" name="consent" required class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded mt-1">
+                                <label for="consent" class="ml-2 block text-sm text-gray-700">
+                                    I consent to Life Home & Community Care collecting my details through this form.
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full shadow-md">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-gray-50 p-8 rounded-xl shadow-sm h-full">
+                            <h3 class="text-2xl font-bold mb-6 text-primary">Contact Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Address</h4>
+                                        <p class="text-gray-600">Suite 3, 647–649 George St<br>Haymarket, NSW 2000</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Phone</h4>
+                                        <p class="text-gray-600">
+                                            <a href="tel:0431253789" class="hover:text-primary transition">0431 253 789</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Email</h4>
+                                        <p class="text-gray-600">
+                                            <a href="mailto:info@lifehealth.net.au" class="hover:text-primary transition">info@lifehealth.net.au</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Business Hours</h4>
+                                        <p class="text-gray-600">
+                                            Monday - Friday: 9:00 AM - 5:00 PM<br>
+                                            Saturday: By appointment<br>
+                                            Sunday: Closed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-bold text-lg mb-3">Our Location</h4>
+                                <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.783425054649!2d151.2034153152106!3d-33.87863398065687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae1f0c1b1d07%3A0x9a9e5b1d5e0e1b1d!2s647-649%20George%20St%2C%20Haymarket%20NSW%202000!5e0!3m2!1sen!2sau!4v1625060000000!5m2!1sen!2sau" 
+                                        width="100%" 
+                                        height="300" 
+                                        style="border:0;" 
+                                        allowfullscreen="" 
+                                        loading="lazy"
+                                        title="Life Home & Community Care Location"
+                                        class="rounded-lg"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mr-3">LH</div>
+                        <span class="text-xl font-bold">Life Home Care</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Registered NDIS provider offering Chiropractic and Occupational Therapy services with home modification assessments in Sydney.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#ndis" class="text-gray-400 hover:text-white transition">NDIS Information</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Chiropractic Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Occupational Therapy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home Modifications</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">NDIS Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Life Stage Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and health tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-dark focus:outline-none">
+                        <button type="submit" class="bg-primary hover:bg-blue-700 px-4 py-2 rounded-r-lg text-white">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2023 Life Home & Community Care Pty Ltd. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-lg floating-btn opacity-0 invisible transition-all duration-300 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-8 left-8 z-40">
+        <div class="relative group">
+            <button id="fab-button" class="bg-primary text-white p-4 rounded-full shadow-lg floating-btn focus:outline-none">
+                <i class="fas fa-comments text-xl"></i>
+            </button>
+            <div class="absolute bottom-full left-0 mb-2 hidden group-hover:block bg-white rounded-lg shadow-lg p-4 w-64">
+                <h4 class="font-bold text-dark mb-2">Need help?</h4>
+                <p class="text-gray-600 text-sm mb-3">Chat with our team for quick answers to your questions.</p>
+                <a href="tel:0431253789" class="block bg-primary hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition duration-300 text-sm">
+                    <i class="fas fa-phone mr-1"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Accordion functionality
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            const button = accordion.querySelector('.accordion-button');
+            button.addEventListener('click', () => {
+                accordion.classList.toggle('active');
+                const icon = button.querySelector('i');
+                if (accordion.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Initialize FAB tooltip
+        const fabButton = document.getElementById('fab-button');
+        fabButton.addEventListener('click', () => {
+            window.location.href = "tel:0431253789";
+        });
+    </script>
+</body>
+</html>
